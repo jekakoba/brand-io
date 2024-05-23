@@ -4,7 +4,8 @@
 	left: 0;
 	width: 100%;
 	z-index: 999;
-	background-color: var(--mainBackgroundColor);
+
+	// background-color: var(--mainBackgroundColor);
 	@media (min-width: $mobile) {
 		padding-top: toRem(5);
 		padding-bottom: toRem(5);
