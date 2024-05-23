@@ -1,0 +1,169 @@
+.menu {
+	@media (min-width: $mobile) {
+		justify-self: start;
+	}
+	@media (max-width: $mobile) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background-color: rgba(255, 255, 255, 0.96);
+		z-index: -1;
+		transition: opacity 0.3s 0.3s;
+		pointer-events: none;
+		opacity: 0;
+		&::before {
+			content: "";
+			position: fixed;
+			width: 100%;
+			min-height: toRem(50);
+			top: 0;
+			left: 0;
+			z-index: 2;
+			background-color: var(--mainBackgroundColor);
+		}
+
+		.menu-open & {
+			opacity: 1;
+			pointer-events: all;
+			transition: opacity 0.5s;
+		}
+	}
+	// .menu__icon
+	&__icon {
+	}
+	// .menu__body
+	&__body {
+		@media (max-width: $mobile) {
+			overflow: auto;
+			height: 100%;
+			padding: toRem(110) toRem(15) toRem(30) toRem(15);
+			position: relative;
+		}
+		@media (max-width: $mobileSmall) {
+			padding-top: toRem(80);
+		}
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: toRem(10) toRem(50);
+		@media (max-width: $tablet) {
+			column-gap: toRem(20);
+		}
+		@media (max-width: $mobile) {
+			flex-direction: column;
+			gap: toRem(30);
+			align-items: flex-end;
+		}
+	}
+	// .menu__item
+	&__item {
+		@media (max-width: $mobile) {
+			transform: translateX(toRem(20));
+			opacity: 0;
+			will-change: filter;
+			filter: blur(toRem(10));
+			$base-delay: 0.2s;
+			$properties:
+				transform 0.2s,
+				opacity 0.5s,
+				filter 0.5s;
+			@for $i from 1 through 4 {
+				&:nth-child(#{$i}) {
+					transition: $properties;
+					transition-delay: $base-delay - 0.1s * $i;
+					.menu__link {
+						transition-delay: $base-delay - 0.1s * $i;
+					}
+				}
+			}
+		}
+		.menu-open & {
+			transform: translateX(0);
+			opacity: 1;
+			filter: blur(0);
+			$base-delay: 0.1s;
+			$properties:
+				transform 0.5s,
+				opacity 0.7s,
+				filter 1s;
+			@for $i from 1 through 4 {
+				&:nth-child(#{$i}) {
+					transition: $properties;
+					transition-delay: $base-delay + 0.1s * $i;
+
+					.menu__link {
+						transition-delay: $base-delay + 0.1s * $i;
+					}
+				}
+			}
+		}
+	}
+	// .menu__link
+	&__link {
+		@media (any-hover: hover) {
+			&:hover {
+			}
+		}
+		@media (max-width: $mobile) {
+			font-size: toRem(25);
+		}
+	}
+}
+
+//Burger Icon
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: toRem(30);
+		height: toRem(18);
+		z-index: 5;
+		@media (any-hover: none) {
+			cursor: default;
+		}
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - toRem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - toRem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

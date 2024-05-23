@@ -1,0 +1,86 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+	position: relative;
+	overflow: hidden;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: toRem(18.5) toRem(42);
+	background-color: var(--greenColor);
+	line-height: 1.2;
+	color: var(--whiteLightColor);
+	font-size: toRem(18);
+	transition:
+		color 0.3s,
+		background-color 0.3s;
+	@media (max-width: $mobileSmall) {
+		font-size: toRem(16);
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--hoverGreenColor);
+		}
+	}
+
+	&_transparent {
+		background-color: transparent;
+		border: toRem(1) solid var(--greenColor);
+		i {
+			&::before {
+				transition: color 0.3s;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--whiteLightColor) !important;
+				background-color: var(--greenColor);
+				i {
+					&::before {
+						color: var(--whiteLightColor);
+					}
+				}
+			}
+		}
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		pointer-events: none;
+		display: inline-block;
+		top: -11.25rem;
+		left: 0;
+		width: 1.875rem;
+		height: 100%;
+		background-color: #fff;
+		animation: shiny-btn1 5s ease-in-out infinite;
+	}
+}
+@keyframes shiny-btn1 {
+	0% {
+		transform: scale(0) rotate(45deg);
+		transform: scale(0) rotate(45deg);
+		opacity: 0;
+	}
+
+	80% {
+		transform: scale(0) rotate(45deg);
+		transform: scale(0) rotate(45deg);
+		opacity: 0.5;
+	}
+
+	81% {
+		transform: scale(4) rotate(45deg);
+		transform: scale(4) rotate(45deg);
+		opacity: 1;
+	}
+
+	100% {
+		transform: scale(50) rotate(45deg);
+		transform: scale(50) rotate(45deg);
+		opacity: 0;
+	}
+}

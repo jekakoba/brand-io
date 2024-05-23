@@ -1,0 +1,21 @@
+// Ховер з підкресленням
+._hover-link {
+	transition: color 0.3s;
+	&::after {
+		content: "";
+		display: block;
+		width: 100%;
+		background-color: var(--greenColor);
+		height: toRem(1);
+		transform: scale(0);
+		transition: transform 0.3s;
+		margin-top: toRem(1);
+	}
+
+	&:hover {
+		color: var(--greenColor);
+		&::after {
+			transform: scale(1);
+		}
+	}
+}

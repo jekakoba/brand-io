@@ -1,0 +1,134 @@
+.works {
+	// .works__dots
+	&__dots {
+		&.dots {
+			top: -4%;
+			width: 36.136752%;
+			height: 18%;
+			@include adaptiveValue("right", -170, 30, 0, 1440, 767.98);
+		}
+		.dot {
+		}
+	}
+}
+
+.about-us {
+	&__dots {
+		&.dots {
+			transform: translateY(-58%);
+			@include adaptiveValue("right", -120, 52, 0, 1440, 767.98);
+		}
+		.dot {
+			&_red {
+				left: 0;
+				top: percent(16, 235);
+			}
+			&_green {
+				left: 55%;
+				bottom: 55%;
+			}
+			&_purple-dark {
+				left: initial;
+				top: 0;
+				right: percent(67, 373);
+			}
+			&_green-light {
+				bottom: percent(100, 275);
+				right: percent(75, 373);
+			}
+			&_brown {
+				left: initial;
+				right: 0;
+				bottom: percent(61, 275);
+			}
+		}
+	}
+}
+
+.testimonials {
+	&__dots {
+		&.dots {
+			transform: translateY(-25%);
+			top: 0;
+			@include adaptiveValue("left", -120, -20, 0, 1440, 767.98);
+		}
+	}
+}
+.get-started {
+	&__dots {
+		&.dots {
+			transform: translateY(24%);
+			z-index: 3;
+			top: 0;
+
+			@include adaptiveValue("left", -120, -70, 0, 1440, 767.98);
+		}
+	}
+}
+
+.dots {
+	position: absolute;
+	z-index: -1;
+	&_sizes {
+		width: 31.136752%;
+		height: toRem(235);
+		top: 0;
+	}
+	@media (max-width: $mobile) {
+		display: none;
+	}
+	// transform: translate(50%, -34%);
+}
+.dot {
+	border-radius: 50%;
+	position: absolute;
+
+	// 384 243
+	&_red {
+		background-color: var(--redColor);
+		width: toRem(12);
+		height: toRem(12);
+		top: 0;
+		right: 0;
+	}
+	&_green-light {
+		background-color: var(--greenLightColor);
+		width: toRem(8);
+		height: toRem(8);
+	}
+	&_green {
+		background-color: var(--greenColor);
+		width: toRem(20);
+		height: toRem(20);
+		left: percent(158, 384);
+		top: percent(86, 243);
+	}
+	&_blue {
+		background-color: var(--blueColor);
+		width: toRem(12);
+		height: toRem(12);
+		left: 50%;
+		bottom: percent(13, 243);
+	}
+	&_purple-dark {
+		background-color: var(--purpleDarkColor);
+		width: toRem(12);
+		height: toRem(12);
+		left: percent(67, 384);
+		top: 0;
+	}
+	&_purple {
+		background-color: var(--purpleColor);
+		width: toRem(6);
+		height: toRem(6);
+		bottom: 0;
+		left: percent(16, 384);
+	}
+	&_brown {
+		background-color: var(--brownColor);
+		width: toRem(6);
+		height: toRem(6);
+		left: 0;
+		bottom: percent(61, 243);
+	}
+}

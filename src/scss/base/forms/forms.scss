@@ -1,0 +1,117 @@
+//<FORM>
+// Сніппет (HTML):
+
+.form {
+	display: flex;
+	justify-content: space-between;
+	box-shadow:
+		0px 100px 80px 0px rgba(56, 56, 56, 0.1),
+		0px 64.815px 46.852px 0px rgba(56, 56, 56, 0.08),
+		0px 38.519px 25.481px 0px rgba(56, 56, 56, 0.06),
+		0px 20px 13px 0px rgba(56, 56, 56, 0.05),
+		0px 8.148px 6.519px 0px rgba(56, 56, 56, 0.04),
+		0px 1.852px 3.148px 0px rgba(56, 56, 56, 0.02);
+	// .form__input-wrapper
+
+	&__input-wrapper {
+		width: 100%;
+	}
+
+	// .form__input
+
+	&__input {
+	}
+
+	// .form__send
+
+	&__send {
+		&.button {
+			border-radius: none;
+			width: 47%;
+			padding: toRem(18.5) toRem(10);
+			@media (max-width: $mobileSmall) {
+				padding: toRem(10) toRem(10);
+			}
+		}
+	}
+
+	&_search {
+		width: 100%;
+		box-shadow: none;
+		.input {
+			background-color: var(--mainBackgroundColor);
+			min-height: toRem(50);
+			color: #d7d7d7;
+			font-size: toRem(12);
+			padding: 0 toRem(12);
+			&:focus {
+				outline: none;
+			}
+		}
+		.form__input-wrapper {
+			position: relative;
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				right: 0;
+				height: toRem(34.5);
+				width: toRem(1.5);
+				background-color: var(--mainBackgroundColor);
+				filter: drop-shadow(toRem(2) toRem(2) toRem(4) rgba(0, 0, 0, 0.25));
+			}
+		}
+		.form__send {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: toRem(70);
+			background-color: var(--mainBackgroundColor);
+			i {
+				&::before {
+					color: var(--greenColor);
+					filter: drop-shadow(20px 20px 20px #dadadac5);
+				}
+			}
+		}
+	}
+}
+
+//</FORM>
+
+// <BUTTONS>
+// Сніппет (HTML): btn
+@import "button";
+
+// <INPUTS>
+// Сніппет (HTML): inp
+@import "input";
+
+// <CHECK>
+// Сніппет (HTML): chk
+// @import "checkbox";
+
+// <RADIO>
+// Сніппет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Сніппет (HTML): sel
+// @import "select";
+
+// <RATING>
+// Сніппет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Сніппет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Сніппет (HTML):
+// @import "range";
+
+// <CALENDAR>
+// Сніппет (HTML):
+// @import "datepicker";
