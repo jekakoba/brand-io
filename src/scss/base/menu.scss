@@ -69,11 +69,11 @@
 			opacity: 0;
 			will-change: filter;
 			filter: blur(toRem(10));
-			$base-delay: 0.2s;
+			$base-delay: 0.1s;
 			$properties:
-				transform 0.2s,
-				opacity 0.5s,
-				filter 0.5s;
+				transform 0.1s,
+				opacity 0.2s,
+				filter 0.2s;
 			@for $i from 1 through 4 {
 				&:nth-child(#{$i}) {
 					transition: $properties;
@@ -90,9 +90,9 @@
 			filter: blur(0);
 			$base-delay: 0.1s;
 			$properties:
-				transform 0.5s,
-				opacity 0.7s,
-				filter 1s;
+				transform 0.3s,
+				opacity 0.5s,
+				filter 0.3s;
 			@for $i from 1 through 4 {
 				&:nth-child(#{$i}) {
 					transition: $properties;
