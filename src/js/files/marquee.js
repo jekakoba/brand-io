@@ -68,7 +68,7 @@ function marquee() {
 		$marquee.classList.add(CLASS_NAMES.wrapper);
 		Array.from($childElements).forEach(($childItem) => $childItem.classList.add(CLASS_NAMES.item));
 
-		const htmlStructure = `<div class="${CLASS_NAMES.inner}">${$marquee.innerHTML}</div>`;
+		const htmlStructure = `<ul class="${CLASS_NAMES.inner}">${$marquee.innerHTML}</ul>`;
 		$marquee.innerHTML = htmlStructure;
 	};
 
@@ -115,7 +115,6 @@ function marquee() {
 		};
 
 		const onChangeStartPosition = () => {
-			console.log("work");
 			startPosition = 0;
 			$marqueeInner.removeEventListener("animationiteration", onChangeStartPosition);
 			onResize();
@@ -177,7 +176,6 @@ function marquee() {
 
 			$marqueeInner.style.animation = `${animName} ${(firstScreenVisibleSize + (startPosition * firstScreenVisibleSize) / 100) / speed
 				}s infinite linear`;
-			console.log((firstScreenVisibleSize + (startPosition * firstScreenVisibleSize) / 100) / speed);
 		};
 
 		// Функція роботи з елементами. (дублювання, вказання \ підрахунок розмірів)
