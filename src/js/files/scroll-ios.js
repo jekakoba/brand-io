@@ -23,7 +23,7 @@ const scrolling = (selectorBtn) => {
 				document.documentElement.scrollTop || document.body.scrollTop
 			),
 				hash = this.hash;
-			let toBlock = document.querySelector(hash).getBoundingClientRect().top - headerHeight - 30;
+			let toBlock = document.querySelector(hash).getBoundingClientRect().top - headerHeight;
 			let start = null;
 			requestAnimationFrame(step);
 			scrol = true;

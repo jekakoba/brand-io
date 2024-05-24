@@ -24,18 +24,19 @@
 	// .page__works
 
 	&__works {
-		@include adaptiveValue("padding-bottom", 186, 90);
+		@include adaptiveValue("padding-bottom", 156, 90);
 	}
 
 	// .page__about-us
 	&__about-us {
-		// padding-top: toRem(100);
-		@include adaptiveValue("padding-bottom", 173, 60);
+		padding-top: toRem(30);
+		@include adaptiveValue("padding-bottom", 143, 60);
 	}
 
 	// .page__testimonials
 
 	&__testimonials {
+		padding-top: toRem(30);
 		@include adaptiveValue("margin-bottom", 191, 90);
 	}
 
