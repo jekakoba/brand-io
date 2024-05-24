@@ -1,3 +1,39 @@
+.hero {
+	&__dots {
+		&.dots {
+			left: toRem(-50);
+			&_left-bottom {
+				top: initial;
+				bottom: 0;
+				left: toRem(-100);
+				width: 36.136752%;
+				height: 18%;
+				@media (max-width: $mobile) {
+					left: 28%;
+					width: 126.136752%;
+					height: 42%;
+				}
+			}
+			@media (max-width: toEm(1024)) {
+				opacity: 0.4;
+			}
+			@media (max-width: $mobile) {
+				display: block;
+			}
+			&_sizes {
+				@media (max-width: $mobile) {
+					width: 100.136752%;
+					height: 14.6875rem;
+					left: initial;
+					top: 40%;
+				}
+			}
+		}
+		.dot {
+		}
+	}
+}
+
 .works {
 	// .works__dots
 	&__dots {

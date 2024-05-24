@@ -4,8 +4,11 @@
 	left: 0;
 	width: 100%;
 	z-index: 999;
+	transition: background-color 0.3s ease 0s;
+	&._header-scroll {
+		background-color: var(--mainBackgroundColor);
+	}
 
-	// background-color: var(--mainBackgroundColor);
 	@media (min-width: $mobile) {
 		padding-top: toRem(5);
 		padding-bottom: toRem(5);
@@ -17,11 +20,15 @@
 		align-items: center;
 		grid-template-columns: auto 1fr auto;
 		min-height: toRem(80);
+		transition: min-height 0.3s;
 		@include adaptiveValue("column-gap", 100, 50, 0, $containerWidth, 767.98);
 		@media (max-width: $mobile) {
 			grid-template-columns: auto auto toRem(30);
 			column-gap: toRem(20);
-			min-height: toRem(50);
+			min-height: toRem(60);
+		}
+		._header-scroll & {
+			min-height: toRem(60);
 		}
 	}
 
@@ -62,9 +69,11 @@
 			font-size: toRem(14);
 		}
 		&.button {
+			@media (max-width: $tablet) {
+				padding: toRem(12) toRem(30);
+			}
 			@media (max-width: $mobile) {
-				padding-top: toRem(20);
-				padding-bottom: toRem(20);
+				padding: toRem(12) toRem(40);
 			}
 			@media (max-width: $mobileSmall) {
 				padding: toRem(12) toRem(10);

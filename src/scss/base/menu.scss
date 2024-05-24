@@ -18,7 +18,7 @@
 			content: "";
 			position: fixed;
 			width: 100%;
-			min-height: toRem(50);
+			min-height: toRem(60);
 			top: 0;
 			left: 0;
 			z-index: 2;
@@ -39,7 +39,7 @@
 		@media (max-width: $mobile) {
 			overflow: auto;
 			height: 100%;
-			padding: toRem(110) toRem(15) toRem(30) toRem(15);
+			padding: toRem(90) toRem(15) toRem(30) toRem(15);
 			position: relative;
 		}
 		@media (max-width: $mobileSmall) {

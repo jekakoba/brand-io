@@ -13,6 +13,10 @@
 	line-height: 1.2;
 	color: var(--whiteLightColor);
 	font-size: toRem(18);
+	filter: drop-shadow(0px 1.852px 3.148px rgba(56, 56, 56, 0.02))
+		drop-shadow(0px 8.148px 6.519px rgba(56, 56, 56, 0.04)) drop-shadow(0px 20px 13px rgba(56, 56, 56, 0.05))
+		drop-shadow(0px 38.519px 25.481px rgba(56, 56, 56, 0.06))
+		drop-shadow(0px 64.815px 46.852px rgba(56, 56, 56, 0.08)) drop-shadow(0px 100px 80px rgba(56, 56, 56, 0.1));
 	transition:
 		color 0.3s,
 		background-color 0.3s;
