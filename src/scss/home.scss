@@ -326,6 +326,42 @@
 				width: toRem(20);
 				height: toRem(20);
 			}
+			&::after {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				border: toRem(12) solid var(--greenColor);
+				border-radius: 100%;
+				-webkit-transform: scale(0.25);
+				-ms-transform: scale(0.25);
+				-o-transform: scale(0.25);
+				transform: scale(0.25);
+				-webkit-animation-name: puls;
+				-o-animation-name: puls;
+				animation-name: puls;
+				-webkit-animation-duration: 3s;
+				-o-animation-duration: 3s;
+				animation-duration: 3s;
+				-webkit-animation-timing-function: ease-out;
+				-o-animation-timing-function: ease-out;
+				animation-timing-function: ease-out;
+				-webkit-animation-iteration-count: infinite;
+				-o-animation-iteration-count: infinite;
+				animation-iteration-count: infinite;
+				z-index: 3;
+				@media (max-width: $mobileSmall) {
+					border: toRem(8) solid var(--greenColor);
+				}
+			}
+
+			&:hover {
+				&::after {
+					display: none;
+				}
+			}
 		}
 
 		// .experience__content
