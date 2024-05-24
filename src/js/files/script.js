@@ -25,5 +25,5 @@ const pageNavScroll = () => {
 	window.addEventListener('scroll', handleScroll)
 	handleScroll()
 }
-document.addEventListener('DOMContentLoaded', pageNavScroll)
+// document.addEventListener('DOMContentLoaded', pageNavScroll)
 
