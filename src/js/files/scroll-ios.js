@@ -31,6 +31,7 @@ const scrolling = (selectorBtn) => {
 				if (start === null) {
 					start = time;
 					document.documentElement.classList.remove('menu-open');
+					document.documentElement.classList.remove('lock');
 				}
 				let progress = time - start,
 					r =

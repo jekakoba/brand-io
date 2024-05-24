@@ -11,11 +11,12 @@
 		transition: transform 0.3s;
 		margin-top: toRem(1);
 	}
-
-	&:hover {
-		color: var(--greenColor);
-		&::after {
-			transform: scale(1);
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--greenColor);
+			&::after {
+				transform: scale(1);
+			}
 		}
 	}
 }
