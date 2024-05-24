@@ -14,7 +14,7 @@ let scrol = false;
 function stopAnimation() { stop = true; }
 const scrolling = (selectorBtn) => {
 	const links = document.querySelectorAll(".ancor");
-	let speed = 0.6;
+	let speed = 0.3;
 	const headerHeight = document.querySelector('.header').offsetHeight;
 	for (let i = 0; i < links.length; i++) {
 		links[i].addEventListener("click", function (event) {
@@ -23,13 +23,14 @@ const scrolling = (selectorBtn) => {
 				document.documentElement.scrollTop || document.body.scrollTop
 			),
 				hash = this.hash;
-			let toBlock = document.querySelector(hash).getBoundingClientRect().top - headerHeight;
+			let toBlock = document.querySelector(hash).getBoundingClientRect().top - headerHeight - 30;
 			let start = null;
 			requestAnimationFrame(step);
 			scrol = true;
 			function step(time) {
 				if (start === null) {
 					start = time;
+					document.documentElement.classList.remove('menu-open');
 				}
 				let progress = time - start,
 					r =
@@ -46,6 +47,8 @@ const scrolling = (selectorBtn) => {
 					body.removeEventListener('click', stopAnimation);
 					stop = false;
 					scrol = false
+
+
 				}
 			}
 		});

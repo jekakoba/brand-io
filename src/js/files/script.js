@@ -4,23 +4,19 @@ import { isMobile } from "./functions.js";
 import { flsModules } from "./modules.js";
 
 
-function showExperience() {
-	document.addEventListener("click", function (e) {
-		const target = e.target
-		if (target.closest('[data-experience-open]')) {
-			const dropdownElement = target.closest('[data-experience]');
-			experienceOpen(dropdownElement)
-		} else if (!target.closest('[data-experience]')) {
-			const dropdownEl = document.querySelector('._show-experience');
-			if (!dropdownEl) return
-			experienceClose(dropdownEl)
-		}
-	});
-	function experienceOpen(dropdownEl) {
-		dropdownEl.classList.toggle('_show-experience')
-	}
-	function experienceClose(dropdownEl) {
-		dropdownEl.classList.remove('_show-experience')
-	}
-}
-showExperience()
+// const pageNavScroll = () => {
+// 	window.addEventListener("scroll", (() => {
+// 		let scrollDistance = window.scrollY;
+// 		const sections = document.querySelectorAll("[data-nav-block]");
+// 		const navLinks = document.querySelectorAll("[data-nav-links] a");
+// 		sections.forEach(((section, i) => {
+// 			if (section.offsetTop - document.querySelector("header").clientHeight <= scrollDistance) {
+// 				navLinks.forEach((link => {
+// 					if (link.classList.contains("_hover-link")) link.classList.remove("_hover-link");
+// 				}));
+// 				navLinks[i].classList.add("_hover-link");
+// 			}
+// 		}));
+// 	}));
+// };
+// if (document.querySelector("[data-nav-page]")) pageNavScroll();
