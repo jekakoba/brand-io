@@ -31,25 +31,8 @@ function initSliders() {
 			effect: 'fade',
 			autoplay: {
 				delay: 3000,
-				disableOnInteraction: false,
+				disableOnInteraction: true
 			},
-
-
-			// Пагінація
-			/*
-			pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			},
-			*/
-
-			// Скроллбар
-			/*
-			scrollbar: {
-				el: '.swiper-scrollbar',
-				draggable: true,
-			},
-			*/
 
 			// Кнопки "вліво/вправо"
 			navigation: {
@@ -77,7 +60,15 @@ function initSliders() {
 
 			// Події
 			on: {
+				init() {
+					this.el.addEventListener('mouseenter', () => {
+						this.autoplay.stop();
+					})
 
+					this.el.addEventListener('mouseleave', () => {
+						this.autoplay.start();
+					})
+				}
 			}
 		});
 	}

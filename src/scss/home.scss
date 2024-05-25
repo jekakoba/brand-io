@@ -71,7 +71,6 @@
 	&__link {
 		// font-size: vw(18);
 		&.button {
-
 			// padding: vw(18.5) vw(33.5);
 		}
 		&_contact {
@@ -748,6 +747,9 @@
 	// .testimonials__wrapper
 
 	&__wrapper {
+		&.swiper-wrapper {
+			will-change: transform;
+		}
 	}
 
 	// .testimonials__item
