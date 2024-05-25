@@ -6,7 +6,8 @@
 	z-index: 999;
 	transition: background-color 0.3s ease 0s;
 	will-change: background-color;
-	&._header-scroll {
+
+	.scrolled-page & {
 		background-color: var(--mainBackgroundColor);
 	}
 
@@ -29,7 +30,8 @@
 			column-gap: toRem(20);
 			min-height: toRem(60);
 		}
-		._header-scroll & {
+
+		.scrolled-page & {
 			min-height: toRem(60);
 		}
 	}

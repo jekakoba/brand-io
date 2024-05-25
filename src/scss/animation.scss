@@ -1,0 +1,196 @@
+.hero {
+	// .hero__content
+
+	// .hero__title
+
+	&__title {
+		transform: translateY(5%);
+		opacity: 0;
+		transition:
+			transform var(--mainTransition) 0.3s,
+			opacity 1s 0.3s;
+		._watcher-view & {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	// .hero__text
+
+	&__text {
+		transform: translateY(10%);
+		opacity: 0;
+		transition:
+			transform var(--mainTransition) 0.5s,
+			opacity var(--mainTransition) 0.5s;
+		._watcher-view & {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	// .hero__buttons
+
+	&__buttons {
+		transform: translateY(10%);
+		opacity: 0;
+		transition:
+			transform var(--mainTransition) 0.7s,
+			opacity var(--mainTransition) 0.7s;
+		._watcher-view & {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	// .hero__image-container
+
+	&__image-container {
+	}
+
+	// .hero__video
+
+	&__video {
+		transform: translateX(10%);
+		opacity: 0;
+		transition:
+			transform var(--mainTransition) 0.5s,
+			opacity var(--mainTransition) 0.5s;
+		._watcher-view & {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+
+	// .hero__experience
+
+	&__experience {
+	}
+
+	// .hero__profile
+
+	&__profile {
+		transform: translateX(-5%);
+		opacity: 0;
+		transition:
+			transform var(--mainTransition) 0.6s,
+			opacity var(--mainTransition) 0.6s;
+		._watcher-view & {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	// .hero__image
+
+	&__image {
+		transform: translateY(2%);
+		opacity: 0;
+		transition:
+			transform var(--mainTransition) 0.4s,
+			opacity var(--mainTransition) 0.4s;
+		._watcher-view & {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+
+	// .hero__follower-card
+
+	&__follower-card {
+		transform: translateX(10%);
+		opacity: 0;
+		transition:
+			transform var(--mainTransition) 0.5s,
+			opacity var(--mainTransition) 0.5s;
+		._watcher-view & {
+			transform: translateX(0);
+			opacity: 1;
+		}
+	}
+
+	// .hero__smiles
+
+	&__smiles {
+		transform: translateY(10%);
+		opacity: 0;
+		transition:
+			transform var(--mainTransition) 0.7s,
+			opacity var(--mainTransition) 0.7s;
+		._watcher-view & {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	.video {
+		// .video__text
+
+		&__text {
+		}
+
+		// .video__cirlce
+
+		&__cirlce {
+		}
+	}
+
+	.experience {
+		opacity: 0;
+		// .experience__button
+
+		&__button {
+		}
+
+		// .experience__content
+
+		&__content {
+		}
+
+		// .experience__value
+
+		&__value {
+		}
+
+		// .experience__text
+
+		&__text {
+		}
+	}
+	.profile {
+		// .profile__avatar
+
+		&__avatar {
+		}
+
+		// .profile__top
+
+		&__top {
+		}
+
+		// .profile__name
+
+		&__name {
+		}
+
+		// .profile__label
+
+		&__label {
+		}
+
+		// .profile__growth
+
+		&__growth {
+		}
+
+		// .profile__text-growth
+
+		&__text-growth {
+		}
+
+		// .profile__value-growth
+
+		&__value-growth {
+		}
+	}
+}
