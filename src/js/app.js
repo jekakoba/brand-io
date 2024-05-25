@@ -30,13 +30,13 @@ import * as flsFunctions from "./files/functions.js";
 
 /* Перевірка підтримки webp, додавання класу webp або no-webp для HTML */
 /* (i) необхідно для коректного відображення webp із css */
-// flsFunctions.isWebp();
+flsFunctions.isWebp();
 /* Додавання класу touch для HTML якщо браузер мобільний */
 // flsFunctions.addTouchClass();
 /* Додавання loaded для HTML після повного завантаження сторінки */
-// flsFunctions.addLoadedClass();
+flsFunctions.addLoadedClass();
 /* Модуль для роботи з меню (Бургер) */
-// flsFunctions.menuInit();
+flsFunctions.menuInit();
 /* Форматування чисел */
 // import './libs/wNumb.min.js';
 
@@ -45,7 +45,7 @@ import * as flsFunctions from "./files/functions.js";
 Документація: https://template.fls.guru/template-docs/modul-spojlery.html
 Сніппет (HTML): spollers
 */
-// flsFunctions.spollers();
+flsFunctions.spollers();
 
 /*
 Модуль "Таби"
@@ -100,7 +100,7 @@ import * as flsFunctions from "./files/functions.js";
 Модуль паралаксу мишею
 Документація: https://template.fls.guru/template-docs/modul-animacii-parallaks-obektov-pri-dvizhenii-myshi.html
 */
-// import './libs/parallax-mouse.js'
+import './libs/parallax-mouse.js'
 
 // ========================================================================================================================================================================================================================================================
 // Робота з формами ========================================================================================================================================================================================================================================================
@@ -167,7 +167,7 @@ flsForms.formFieldsInit({
 Документація плагіна: https://swiperjs.com/
 Сніппет(HTML): swiper
 */
-// import "./files/sliders.js";
+import "./files/sliders.js";
 
 // ========================================================================================================================================================================================================================================================
 // Модулі роботи з прокручуванням сторінки ========================================================================================================================================================================================================================================================
@@ -190,7 +190,7 @@ flsForms.formFieldsInit({
 // Спостерігач за об'єктами з атрибутом data-watch
 // Документація: https://template.fls.guru/template-docs/modul-nabljudatel-za-poyavleniem-elementa-pri-skrolle.html
 // Сніппет(HTML):
-// import './libs/watcher.js'
+import './libs/watcher.js'
 
 // Модуль поекранної прокрутки
 // Документація: https://template.fls.guru/template-docs/modul-poekrannoj-prokrutki-stranicy-fullpage.html
@@ -203,7 +203,7 @@ flsForms.formFieldsInit({
 // import './libs/parallax.js'
 
 // Функції роботи скролом
-// import * as flsScroll from "./files/scroll/scroll.js";
+import * as flsScroll from "./files/scroll/scroll.js";
 
 // Плавна навігація по сторінці
 // Документація: https://template.fls.guru/template-docs/modul-plavnoj-navigacii-po-stranice.html
@@ -211,12 +211,12 @@ flsForms.formFieldsInit({
 
 // Функціонал додавання класів до хедеру під час прокручування
 // Документація: https://template.fls.guru/template-docs/modul-dobavleniya-klassov-k-shapke-pri-prokrutke-stranicy.html
-// flsScroll.headerScroll();
+flsScroll.headerScroll();
 
 // Модуль анімація цифрового лічильника
 // Документація: https://template.fls.guru/template-docs/modul-animacii-cifrovogo-lichilnika.html
 // Сніппет(HTML):
-// flsScroll.digitsCounter();
+flsScroll.digitsCounter();
 
 // ========================================================================================================================================================================================================================================================
 // Галерея ========================================================================================================================================================================================================================================================
@@ -252,7 +252,7 @@ flsForms.formFieldsInit({
 // import "./files/dropdown.js";
 
 // Плавний скрол з урахуванням пристроїв IOS
-// import "./files/scroll-ios.js";
+import "./files/scroll-ios.js";
 
 // Опитування
 // import "./files/quizlet.js";
@@ -276,7 +276,7 @@ flsForms.formFieldsInit({
 // import "./files/active-navigation-link.js";
 
 // бігучий рядок
-// import "./files/marquee.js";
+import "./files/marquee.js";
 // ========================================================================================================================================================================================================================================================
 /* Підключаємо файли зі своїм кодом */
 import "./files/script.js";
