@@ -137,6 +137,10 @@
 
 	.experience {
 		opacity: 0;
+		transition: opacity var(--mainTransition) 0.8s;
+		&._watcher-view {
+			opacity: 1;
+		}
 		// .experience__button
 
 		&__button {
