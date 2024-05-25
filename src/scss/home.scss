@@ -90,6 +90,7 @@
 	&__image {
 		// padding-bottom: 152.347826%;
 		padding-bottom: 125.347826%;
+		pointer-events: none;
 	}
 	&__follower-card {
 		position: absolute;
@@ -273,7 +274,7 @@
 		right: 35%;
 		width: toRem(28);
 		height: toRem(28);
-		z-index: 3;
+		z-index: 10;
 		transform: translate(5%, -74%);
 		&:hover {
 			.experience__content {
@@ -774,7 +775,7 @@
 
 	// .advantages__tilte
 
-	&__tilte {
+	&__title {
 		text-align: center;
 		max-width: toRem(644);
 		margin: 0 auto;

@@ -68,7 +68,7 @@ function marquee() {
 		$marquee.classList.add(CLASS_NAMES.wrapper);
 		Array.from($childElements).forEach(($childItem) => $childItem.classList.add(CLASS_NAMES.item));
 
-		const htmlStructure = `<ul class="${CLASS_NAMES.inner}">${$marquee.innerHTML}</ul>`;
+		const htmlStructure = `<div class="${CLASS_NAMES.inner}">${$marquee.innerHTML}</div>`;
 		$marquee.innerHTML = htmlStructure;
 	};
 

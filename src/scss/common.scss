@@ -143,6 +143,7 @@
 	&__item {
 	}
 }
+
 .item-statistics {
 	text-align: center;
 	border: toRem(1) solid var(--whiteDarkColor);
@@ -164,6 +165,7 @@
 			border-color: var(--whiteColor);
 		}
 	}
+
 	@media (min-width: $tablet) {
 		min-width: toRem(192);
 	}

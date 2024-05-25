@@ -105,6 +105,7 @@
 .dots {
 	position: absolute;
 	z-index: -1;
+	pointer-events: none;
 	&_sizes {
 		width: 31.136752%;
 		height: toRem(235);
