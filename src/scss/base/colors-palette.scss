@@ -2,9 +2,16 @@
 // colors palette
 // ===============
 :root {
-	--poppins: "Poppins", sans-serif;
-	--inter: "Inter", sans-serif;
-	--roboto: "Roboto", sans-serif;
+	//Poppins
+	--poppins-light: "Poppins-Light", sans-serif;
+	--poppins-regular: "Poppins-Regular", sans-serif;
+	--poppins-medium: "Poppins-Medium", sans-serif;
+	--poppins-semiBold: "Poppins-Semibold", sans-serif;
+	--poppins-bold: "Poppins-Bold", sans-serif;
+	//Inter
+
+	--inter-medium: "Inter-Medium", sans-serif;
+	--inter-semiBold: "Inter-SemiBold", sans-serif;
 
 	--primary: #425466;
 
