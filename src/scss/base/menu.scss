@@ -107,6 +107,8 @@
 	}
 	// .menu__link
 	&__link {
+		color: var(--grayDarkColor);
+		font-size: toRem(18);
 		@media (any-hover: hover) {
 			&:hover {
 			}

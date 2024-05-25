@@ -88,5 +88,8 @@
 				padding: toRem(12) toRem(10);
 			}
 		}
+		&_login {
+			color: var(--grayDarkColor);
+		}
 	}
 }
