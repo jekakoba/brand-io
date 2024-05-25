@@ -17,11 +17,14 @@ textarea {
 	caret-color: inherit;
 	min-height: toRem(80);
 	font-weight: 500;
-	color: var(--formColor);
+
 	padding-right: toRem(40);
 	@media (max-width: $mobileSmall) {
 		font-size: toRem(12);
 		padding: 0 toRem(10);
+	}
+	&::placeholder {
+		color: var(--formColor);
 	}
 	&._form-focus {
 	}

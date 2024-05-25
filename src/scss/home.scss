@@ -71,6 +71,7 @@
 	&__link {
 		// font-size: vw(18);
 		&.button {
+
 			// padding: vw(18.5) vw(33.5);
 		}
 		&_contact {
@@ -286,6 +287,11 @@
 					visibility 0.3s,
 					transform 0.3s;
 			}
+			.experience__button {
+				&::after {
+					display: none;
+				}
+			}
 			.experience__text {
 				opacity: 1;
 				transform: translateX(0);
@@ -355,12 +361,6 @@
 				z-index: 3;
 				@media (max-width: $mobileSmall) {
 					border: toRem(8) solid var(--greenColor);
-				}
-			}
-
-			&:hover {
-				&::after {
-					display: none;
 				}
 			}
 		}
